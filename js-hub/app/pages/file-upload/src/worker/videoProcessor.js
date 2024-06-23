@@ -25,7 +25,7 @@ export default class VideoProcessor {
                     }
                 })
         
-                this.#mp4Demuxer.run(stream, {
+                return this.#mp4Demuxer.run(stream, {
                     onConfig(config) {
                         decoder.configure(config);
                     },
@@ -33,6 +33,10 @@ export default class VideoProcessor {
                     onChunk(chunk) {
                         decoder.decode(chunk);
                     }
+                }).then(() => {
+                    setTimeout(() => {
+                        controller.close();
+                    }, 1000);
                 })
             }
         })
@@ -40,7 +44,7 @@ export default class VideoProcessor {
         
     }
     
-    async start({ file, encoderConfig, renderFrame, sendMessage }) {
+    async start({ file, encoderConfig, renderFrame }) {
         const stream = file.stream();
         const fileName = file.name.split('/').pop().replace('.mp4', '');
         

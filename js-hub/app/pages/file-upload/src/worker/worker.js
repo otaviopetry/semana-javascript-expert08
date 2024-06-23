@@ -44,4 +44,10 @@ onmessage = async ({ data }) => {
             self.postMessage(message);
         }
     })
+
+    setTimeout(() => {
+        self.postMessage({
+            status: 'done',
+        })
+    }, 2000);
 }
