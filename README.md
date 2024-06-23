@@ -22,11 +22,11 @@ Marque esse projeto com uma estrela 🌟 e acesse o nosso [grupo oficial no What
 ## Checklist Features
 
 - Video Uploader
-  - [ ] - Deve entender videos em formato MP4 mesmo se não estiverem fragmentados
-  - [ ] - Deve processar itens em threads isoladas com Web Workers
-  - [ ] - Deve converter fragmentos de videos em formato `144p`
-  - [ ] - Deve renderizar frames em tempo real em elemento canvas
-  - [ ] - Deve gerar arquivos WebM a partir de fragmentos
+  - [X] - Deve entender videos em formato MP4 mesmo se não estiverem fragmentados
+  - [X] - Deve processar itens em threads isoladas com Web Workers
+  - [X] - Deve converter fragmentos de videos em formato `144p`
+  - [X] - Deve renderizar frames em tempo real em elemento canvas
+  - [X] - Deve gerar arquivos WebM a partir de fragmentos
 
 ### Desafios
 - [ ] - Encodar em 360p e 720p
