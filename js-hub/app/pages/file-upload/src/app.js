@@ -17,9 +17,14 @@ worker.onmessage = ({ data }) => {
 let took = ''
 
 view.configureOnFileChange(file => {
+    const canvas = view.getCanvas();
+
     worker.postMessage({
-        file
-    });
+        file,
+        canvas
+    }, [
+        canvas
+    ]);
 
     clock.start((time) => {
         took = time;
